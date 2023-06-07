@@ -1,13 +1,41 @@
-import React from 'react';
+// import React, { useContext } from 'react';
+// import { AuthContext } from '../../Providers/AuthProvider';
+import { getAuth, signOut } from 'firebase/auth';
+import app from '../../Firebase/Firebase.Config';
+import "./Navbar.css"
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
+    // console.log(user)
+    const auth = getAuth(app);
+    // console.log(auth)
+    const userr = auth.currentUser;
+
+    const handelLogOut = () => {
+        signOut(auth)
+            .then(result => {
+                console.log(result)
+                setUser(null)
+
+            })
+            .catch(error => console.log(error))
+    }
+
+
+
     const navOptions = <>
-        <li><a>Home</a></li>
-        <li><a>INstructors</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="instructors">Instructors</Link></li>
 
 
-        <li><a>Classes</a></li>
-        <li><a>Login</a></li>
+        <li><Link to="classes">Classes</Link></li>
+        {
+            user && <li><Link to="dashboard">Dashboard</Link></li>
+        }
+
     </>
 
     return (
@@ -29,8 +57,34 @@ const Navbar = () => {
                         {navOptions}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Get started</a>
+                <div className="navbar-end gap-4">
+                    {
+                        user && <div className="tooltip" data-tip={userr.displayName}>
+                            {
+                                userr && <img className='photo' src={userr.photoURL} alt="" />
+                            }
+
+                        </div>
+                    }
+
+
+                    {/* {
+
+                    userr && <img className='photo' src={userr.photoURL} alt="" />
+                } */}
+
+
+
+
+
+                    {user ?
+                        <button onClick={handelLogOut} variant="primary">Logout</button> :
+                        <Link to="/login">
+                            <button> <Link className='' to="/login">login</Link></button>
+                        </Link>
+                    }
+
+
                 </div>
             </div>
         </>
