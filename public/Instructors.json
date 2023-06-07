@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "instructor_name": "John Smith",
+        "image": "https://images.pexels.com/photos/1214566/pexels-photo-1214566.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "email": "john.smith@example.com",
+        "enrolStudent": 25,
+        "class_name": "Introduction to Photography"
+    },
+    {
+        "id": 2,
+        "instructor_name": "Sarah Johnson",
+        "image": "https://images.pexels.com/photos/2805877/pexels-photo-2805877.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "email": "sarah.johnson@example.com",
+        "enrolStudent": 30,
+        "class_name": "Advanced Lighting Techniques"
+    },
+    {
+        "id": 3,
+        "instructor_name": "Michael Davis",
+        "image": "https://images.pexels.com/photos/2424395/pexels-photo-2424395.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "email": "michael.davis@example.com",
+        "enrolStudent": 55,
+        "class_name": "Portrait Photography"
+    },
+    {
+        "id": 4,
+        "instructor_name": "Emily Thompson",
+        "image": "https://images.pexels.com/photos/3557550/pexels-photo-3557550.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "email": "emily.thompson@example.com",
+        "enrolStudent": 35,
+        "class_name": "Landscape Photography"
+    },
+    {
+        "id": 5,
+        "instructor_name": "Daniel Rodriguez",
+        "image": "https://images.pexels.com/photos/3588239/pexels-photo-3588239.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "email": "daniel.rodriguez@example.com",
+        "enrolStudent": 25,
+        "class_name": "Street Photography"
+    },
+    {
+        "id": 6,
+        "instructor_name": "Jessica Lee",
+        "image": "https://images.pexels.com/photos/3425443/pexels-photo-3425443.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "email": "jessica.lee@example.com",
+        "enrolStudent": 11,
+        "class_name": "Product Photography"
+    }
+]
