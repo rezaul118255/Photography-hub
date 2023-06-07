@@ -1,0 +1,56 @@
+[
+    {
+        "class_name": "Introduction to Photography",
+        "instructor_name": "John Smith",
+        "available_seats": 20,
+        "id": 1,
+        "course_fee": 200,
+        "admitted_students": 15,
+        "image": "https://www.imaginated.com/_next/image/?url=https%3A%2F%2Fwordpress.imaginated.com%2Fwp-content%2Fuploads%2F2022%2F10%2Fgirl-taking-a-photo-scaled.jpg&w=1920&q=75"
+    },
+    {
+        "class_name": "Advanced Lighting Techniques",
+        "instructor_name": "Sarah Johnson",
+        "available_seats": 15,
+        "id": 2,
+        "course_fee": 250,
+        "admitted_students": 25,
+        "image": "https://joemcnally.com/wp-content/uploads/2011/06/Generalist-38.jpg"
+    },
+    {
+        "class_name": "Portrait Photography",
+        "instructor_name": "Michael Davis",
+        "available_seats": 10,
+        "id": 3,
+        "course_fee": 300,
+        "admitted_students": 17,
+        "image": "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_640.jpg"
+    },
+    {
+        "class_name": "Landscape Photography",
+        "instructor_name": "Emily Thompson",
+        "available_seats": 12,
+        "id": 4,
+        "course_fee": 280,
+        "admitted_students": 30,
+        "image": "https://photographylife.com/wp-content/uploads/2016/06/Mass.jpg"
+    },
+    {
+        "class_name": "Street Photography",
+        "instructor_name": "Daniel Rodriguez",
+        "available_seats": 18,
+        "id": 5,
+        "course_fee": 220,
+        "admitted_students": 40,
+        "image": "https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2019/11/street-photography-exercises-16.jpg?fit=1500%2C919&ssl=1"
+    },
+    {
+        "class_name": "Product Photography",
+        "instructor_name": "Jessica Lee",
+        "available_seats": 8,
+        "id": 6,
+        "course_fee": 350,
+        "admitted_students": 6,
+        "image": "https://images.pexels.com/photos/1667088/pexels-photo-1667088.jpeg?cs=srgb&dl=pexels-laryssa-suaid-1667088.jpg&fm=jpg"
+    }
+]
