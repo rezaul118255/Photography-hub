@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import img from '../../../assets/undraw_Sign_up_n6im.png'
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const SignUp = event => {
     const { createUser } = useContext(AuthContext);
@@ -25,6 +26,10 @@ const SignUp = event => {
     }
     return (
         <div className="hero min-h-screen bg-base-200">
+            <Helmet>
+                <title>Photography/SignUp</title>
+
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <div className="w-1/2 mr-12">
                     <img src={img} alt="" />
