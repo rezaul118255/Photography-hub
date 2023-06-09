@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.drawer-side a.active {
+    color: rgb(148, 31, 31);
+}
+
+.drawer-side a {
+    background-color: transparent;
+}
+
+/* 
+.title a.active {
+    color: bisque;
+}
+
+.title a {
+    background-color: transparent;
+    ;
+} */

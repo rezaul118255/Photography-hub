@@ -27,20 +27,22 @@ const Navbar = () => {
 
 
     const navOptions = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="instructors">Instructors</Link></li>
+
+        <li className='title'><Link to="/">Home</Link></li>
+        <li className='title'><Link to="instructors">Instructors</Link></li>
 
 
-        <li><Link to="classes">Classes</Link></li>
+        <li className='title'><Link to="classes">Classes</Link></li>
         {
-            user && <li><Link to="dashboard">Dashboard</Link></li>
+            user && <li className='title'><Link to="dashboard">Dashboard</Link></li>
         }
+
 
     </>
 
     return (
         <>
-            <div className="navbar fixed z-10 bg-opacity-30 max-w-screen-lg bg-black text-white">
+            <div className="navbar color fixed z-10 bg-opacity-30 max-w-screen-lg bg-black text-white">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
