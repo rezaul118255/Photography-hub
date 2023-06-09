@@ -18,7 +18,7 @@ const Navbar = () => {
         signOut(auth)
             .then(result => {
                 console.log(result)
-                setUser(null)
+                // setUser(null)
 
             })
             .catch(error => console.log(error))

@@ -5,7 +5,7 @@ import Popular from './Popular';
 const Popula = () => {
     const [Classes, setClasses] = useState([]);
     useEffect(() => {
-        fetch('Class.json')
+        fetch('http://localhost:5000/class')
             .then(res => res.json())
             .then(data => {
                 const popularClass = data.filter(item => item.admitted_students > 15);

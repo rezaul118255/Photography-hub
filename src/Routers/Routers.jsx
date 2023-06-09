@@ -10,6 +10,7 @@ import DashBoard from "../Pages/Dashboard/DashBoard/DashBoard";
 import ErrorPage from "../Component/ErrorPage/ErrorPage";
 import Instructors from "../Pages/Home/Instructors/Instructors";
 import Classes from "../Pages/Home/Classes/Classes";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 export const router = createBrowserRouter([
     {
         path: "/",
