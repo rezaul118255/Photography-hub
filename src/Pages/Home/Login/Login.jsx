@@ -29,6 +29,7 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 const loggedUser = result.user;
+
                 setUser(loggedUser);
                 Swal.fire({
                     title: 'User Login Successful.',
@@ -40,7 +41,7 @@ const Login = () => {
                     }
                 });
 
-                navigate(from, { replace: true });
+                // navigate(from, { replace: true });
             })
             .catch(error => {
                 setError(error.message)
@@ -51,6 +52,22 @@ const Login = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 const GoogleUser = result.user;
+                const saveUser = { name: GoogleUser.displayName, email: GoogleUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(() => {
+
+
+
+                        navigate(from, { replace: true });
+
+                    })
                 setUser(GoogleUser)
 
             })
