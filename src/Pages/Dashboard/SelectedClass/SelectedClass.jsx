@@ -47,7 +47,7 @@ const SelectedClass = () => {
                 <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
                     <h3 className="text-3xl">Total Items: {cart.length}</h3>
                     {/* <h3 className="text-3xl">Total Price: ${total}</h3> */}
-                    <button className="btn btn-warning btn-sm">PAY</button>
+                    {/* <button className="btn btn-warning btn-sm">PAY</button> */}
                 </div>
                 <div className="overflow-x-auto w-full">
                     <table className="table w-full">
@@ -58,6 +58,7 @@ const SelectedClass = () => {
                                 <th>image</th>
                                 <th>Class Name</th>
                                 <th>Price</th>
+                                <th>Payment</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -80,6 +81,9 @@ const SelectedClass = () => {
                                         {item.class_name}
                                     </td>
                                     <td className="text-end">${item.course_fee}</td>
+                                    <td>
+                                        <button className="btn btn-warning btn-sm">PAY</button>
+                                    </td>
                                     <td>
                                         <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-gray-500  text-white"><FaTrashAlt></FaTrashAlt></button>
                                     </td>
