@@ -4,9 +4,11 @@
 
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import useAdmin from '../../hooks/useAdmin';
 
 const Dashbord = () => {
-    const isAdmin = true;
+    // const isAdmin = true;
+    const [isAdmin] = useAdmin()
     const isInstructors = false;
 
     return (
