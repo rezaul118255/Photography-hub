@@ -13,13 +13,13 @@ const PopularInstructor = ({ teacher }) => {
                     <img className='h-48 w-72' src={image} alt="" />
                 </div>
                 <div>
-                    <h4>Name:{instructor_name}</h4>
-                    <h4>Class:{class_name}</h4>
-                    <h4> email:{email}</h4>
+                    <h4><span className='text-lg font-bold '>Name:</span>{instructor_name}</h4>
+                    <h4><span className='text-lg font-bold '>Class:</span>{class_name}</h4>
+                    <h4> <span className='text-lg font-bold '>email:</span>{email}</h4>
 
                 </div>
                 <div className='flex gap-4'>
-                    <h1>Student {enrolStudent}</h1>
+                    <h1><span className='text-lg font-bold '>Student:</span> {enrolStudent}</h1>
 
                 </div>
 

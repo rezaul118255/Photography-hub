@@ -10,12 +10,12 @@ const Instructor = ({ teacher }) => {
                     <img className='h-48 w-72' src={image} alt="" />
                 </div>
                 <div>
-                    <h4> Category:{class_name}</h4>
-                    <h4>Publised date:{instructor_name}</h4>
-                    <h4>Email:{email}</h4>
+                    <h4> <span className='text-lg font-bold '>Category:</span>{class_name}</h4>
+                    <h4><span className='text-lg font-bold '>Name:</span>{instructor_name}</h4>
+                    <h4><span className='text-lg font-bold '>Email:</span>{email}</h4>
                 </div>
                 <div className='flex gap-4'>
-                    <h4>EnrolStudent:{enrolStudent}</h4>
+                    <h4><span className='text-lg font-bold '>EnrolStudent:</span>{enrolStudent}</h4>
 
 
                 </div>

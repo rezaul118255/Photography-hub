@@ -64,13 +64,13 @@ const Popular = ({ PopularClass }) => {
                     <img src={image} alt="" />
                 </div>
                 <div>
-                    <h4> Category:{class_name}</h4>
-                    <h4>Instructor Name:{instructor_name}</h4>
-                    <h4>Enrol Student:{admitted_students}</h4>
+                    <h4> <span className='text-lg font-bold '>Category:</span>{class_name}</h4>
+                    <h4><span className='text-lg font-bold '>Instructor Name:</span>{instructor_name}</h4>
+                    <h4><span className='text-lg font-bold '>Enrol Student:</span>{admitted_students}</h4>
 
                 </div>
                 <div className='flex gap-4'>
-                    <h1>price: {course_fee}</h1>
+                    <h1><span className='text-lg font-bold '>price:</span> {course_fee}</h1>
                     <Link ><button onClick={() => handelAddToCart(PopularClass)} className='btn btn-primary'>Select</button></Link>
                 </div>
 
