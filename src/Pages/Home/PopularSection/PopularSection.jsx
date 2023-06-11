@@ -3,15 +3,30 @@ import Title from '../../../Component/Title/Title';
 import PopularInstructor from './PopularInstructor';
 
 const PopularSection = () => {
-    const [instructor, setInstructor] = useState([])
+    // const [instructor, setInstructor] = useState([])
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/Instructors')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             const bestInstructor = data.filter(item => item.enrolStudent > -1);
+    //             setInstructor(bestInstructor)
+    //         })
+    // }, [])
+
+
+    const [instructor, setInstructor] = useState([]);
+
     useEffect(() => {
         fetch('http://localhost:5000/Instructors')
             .then(res => res.json())
             .then(data => {
-                const bestInstructor = data.filter(item => item.enrolStudent > 30);
-                setInstructor(bestInstructor)
-            })
-    }, [])
+                const topInstructors = data
+                    .filter(item => item.enrolStudent > -1)
+                    .sort((a, b) => b.enrolStudent - a.enrolStudent)
+                    .slice(0, 6);
+                setInstructor(topInstructors);
+            });
+    }, []);
     return (
         <div>
             <Title heading={"Instructors"}

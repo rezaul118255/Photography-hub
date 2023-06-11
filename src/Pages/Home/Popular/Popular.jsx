@@ -65,7 +65,9 @@ const Popular = ({ PopularClass }) => {
                 </div>
                 <div>
                     <h4> Category:{class_name}</h4>
-                    <h4>Publised date:{instructor_name}</h4>
+                    <h4>Instructor Name:{instructor_name}</h4>
+                    <h4>Enrol Student:{admitted_students}</h4>
+
                 </div>
                 <div className='flex gap-4'>
                     <h1>price: {course_fee}</h1>
