@@ -43,7 +43,7 @@ const ManageUsers = () => {
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: `${user.name} is an Admin Now!`,
+                        title: `${user.name} is an INstructor Now!`,
                         showConfirmButton: false,
                         timer: 1500
                     })
@@ -65,7 +65,9 @@ const ManageUsers = () => {
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>image</th>
                                 <th>Name</th>
+
                                 <th>Email</th>
                                 <th>Make Admin</th>
                                 <th>Make Instructor</th>
@@ -76,6 +78,13 @@ const ManageUsers = () => {
                             {
                                 users.map((user, index) => <tr key={user._id}>
                                     <th>{index + 1}</th>
+                                    <td>
+                                        <div className="avatar">
+                                            <div className="mask mask-squircle w-12 h-12">
+                                                <img src={user.image} alt="Avatar Tailwind CSS Component" />
+                                            </div>
+                                        </div>
+                                    </td>
                                     <td>{user.name}</td>
                                     <td>{user.email}</td>
                                     <td>{user.role === 'admin' ? 'admin' :
@@ -86,7 +95,7 @@ const ManageUsers = () => {
                                         <button onClick={() => handleMakeInstructor(user)} className="btn btn-ghost bg-gray-600  text-white"><FaUserShield></FaUserShield></button>
 
                                     }</td>
-                                    <td><button className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button></td>
+                                    <td><button className="btn btn-ghost bg-red-900  text-white"><FaTrashAlt></FaTrashAlt></button></td>
                                 </tr>)
                             }
 
