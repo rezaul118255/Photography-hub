@@ -38,7 +38,7 @@ const Popula = () => {
 
             </Title>
 
-            <div className='mt-5 gap-4 grid md:grid-cols-3'>
+            <div className=' gap-4 grid md:grid-cols-3'>
                 {
                     Classes.map(PopularClass => <Popular
                         key={PopularClass.id}
