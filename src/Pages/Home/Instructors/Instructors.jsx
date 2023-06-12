@@ -21,11 +21,13 @@ const Instructors = () => {
                 <title>Photography/Instructor</title>
 
             </Helmet>
-            <Title subHeading={"All Instructors are here"}
-                heading={"All Instructors "}>
+            <div>
+                <Title subHeading={"All Instructors are here"}
+                    heading={"All Instructors "}>
 
-            </Title>
-            <div className='mt-5 gap-4 grid md:grid-cols-3'>
+                </Title>
+            </div>
+            <div className=' gap-4 grid md:grid-cols-3'>
                 {
                     instructor.map(teacher => <Instructor
                         key={teacher.id}

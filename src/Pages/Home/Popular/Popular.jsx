@@ -70,7 +70,7 @@ const Popular = ({ PopularClass }) => {
                     {/* Disable the button if class is already added */}
                     <button
                         onClick={() => handelAddToCart(PopularClass)}
-                        className='btn btn-primary'
+                        className='btn btn-yellow'
                         disabled={isClassAdded}
                     >
                         {isClassAdded ? 'Added' : 'Select'}

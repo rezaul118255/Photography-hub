@@ -26,7 +26,7 @@ const Classes = () => {
 
                 </Title>
             </div>
-            <div className='mt-5 gap-4 grid md:grid-cols-3'>
+            <div className=' gap-4 grid md:grid-cols-3'>
                 {
                     Classes.map(PopularClass => <Class
                         key={PopularClass._id}

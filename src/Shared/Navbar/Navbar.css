@@ -4,3 +4,9 @@
     border-radius: 50%;
 
 }
+
+.active {
+    /* Your active route styles here */
+    color: rgb(0, 26, 255);
+    /* Add any other styles you want */
+}
