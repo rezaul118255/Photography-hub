@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import '../Popular/Popular.css'
 import PrivateRoute from '../../../PrivateRoute/PrivateRoute';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -8,9 +8,10 @@ import Swal from 'sweetalert2';
 const Class = ({ PopularClass }) => {
     // const { class_name, instructor_name, available_seats, course_fee, admitted_students, image } = PopularClass
     const { class_name, instructor_name, available_seats, course_fee, admitted_students, image, id } = PopularClass
-    const { user } = useContext(AuthContext)
-    const navigate = useNavigate()
-    const location = useLocation()
+    const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [isClassAdded, setClassAdded] = useState(false);
     const handelAddToCart = PopularClass => {
         console.log(PopularClass)
         if (user && user.email) {
@@ -31,7 +32,8 @@ const Class = ({ PopularClass }) => {
                             title: 'Your class has been saved',
                             showConfirmButton: false,
                             timer: 1500
-                        })
+                        });
+                        setClassAdded(true);
 
                     }
                 })
@@ -71,7 +73,15 @@ const Class = ({ PopularClass }) => {
                 </div>
                 <div className='flex gap-4'>
                     <h1><span className='text-lg font-bold '>price:</span> {course_fee}</h1>
-                    <Link><button onClick={() => handelAddToCart(PopularClass)} className='btn btn-primary'>Select</button></Link>
+                    {/* <Link><button onClick={() => handelAddToCart(PopularClass)} className='btn btn-primary'>Select</button></Link>
+                     */}
+                    <button
+                        onClick={() => handelAddToCart(PopularClass)}
+                        className='btn btn-primary'
+                        disabled={isClassAdded}
+                    >
+                        {isClassAdded ? 'Added' : 'Select'}
+                    </button>
                 </div>
 
 

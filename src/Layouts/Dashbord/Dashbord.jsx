@@ -12,7 +12,7 @@ const Dashbord = () => {
     const [isAdmin] = useAdmin()
     // const isInstructors = false;
     const [isInstructor] = UseInstructor()
-    console.log(isInstructor)
+    // console.log(isInstructor)
 
     return (
         <div>
@@ -61,12 +61,7 @@ const Dashbord = () => {
 
                                 </li>
 
-                                {/* <li>
-                                    <NavLink to="dashboard/myCart">Instructor My Cart
 
-                                    </NavLink>
-
-                                </li> */}
                             </> ||
                             <>
                                 <li>
@@ -82,12 +77,7 @@ const Dashbord = () => {
 
                                 </li>
 
-                                {/* <li>
-                                    <NavLink to="dashboard/myCart">Instructor My Cart
 
-                                    </NavLink>
-
-                                </li> */}
 
                             </>
                         }

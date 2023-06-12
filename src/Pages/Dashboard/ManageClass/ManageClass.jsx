@@ -18,7 +18,7 @@ const ManageClass = () => {
 
                 <div className="w-full">
                     <Helmet>
-                        <title> Resturent ||MangeClass</title>
+                        <title> Photography ||MangeClass</title>
                     </Helmet>
                     <h3 className="text-3xl font-semibold my-4">Total Class: {Classes.length}</h3>
                     <div className="overflow-x-auto">

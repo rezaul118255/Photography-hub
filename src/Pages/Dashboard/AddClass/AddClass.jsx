@@ -24,8 +24,8 @@ const AddClass = () => {
             .then(imgResponse => {
                 if (imgResponse.success) {
                     const imgURL = imgResponse.data.display_url;
-                    const { class_name, instructor_name, available_seats, course_fee, admitted_students } = data;
-                    const newItem = { class_name, instructor_name, available_seats, price: parseFloat(course_fee), admitted_students, image: imgURL }
+                    const { class_name, instructor_name, instructor_email, available_seats, course_fee, admitted_students } = data;
+                    const newItem = { class_name, instructor_name, instructor_email, available_seats, price: parseFloat(course_fee), admitted_students, image: imgURL }
                     console.log(newItem)
                     axiosSecure.post('/Class', newItem)
                         .then(data => {
@@ -59,11 +59,19 @@ const AddClass = () => {
                             className="input input-bordered w-full " />
                     </div>
 
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text">instructor_name</span>
-                        </label>
-                        <textarea {...register("instructor_name", { required: true })} className="textarea textarea-bordered " placeholder="instructor_name"></textarea>
+                    <div className='flex gap-4'>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">instructor_name</span>
+                            </label>
+                            <textarea {...register("instructor_name", { required: true })} className="textarea textarea-bordered " placeholder="type yor name"></textarea>
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">instructor_email</span>
+                            </label>
+                            <textarea {...register("instructor_email", { required: true })} className="textarea textarea-bordered " placeholder="type yor email"></textarea>
+                        </div>
                     </div>
                     <div className="form-control">
                         <label className="label">

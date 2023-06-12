@@ -1,5 +1,6 @@
-import React, { useContext } from 'react';
-import { Link, json, useLocation, useNavigate } from 'react-router-dom';
+
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import "./Popular.css"
 import PrivateRoute from '../../../PrivateRoute/PrivateRoute';
 import { AuthContext } from '../../../Providers/AuthProvider';
@@ -10,6 +11,8 @@ const Popular = ({ PopularClass }) => {
     const { user } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
+    const [isClassAdded, setClassAdded] = useState(false); // State variable to track if class is added
+
     const handelAddToCart = PopularClass => {
         console.log(PopularClass)
         if (user && user.email) {
@@ -30,19 +33,14 @@ const Popular = ({ PopularClass }) => {
                             title: 'Your class has been saved',
                             showConfirmButton: false,
                             timer: 1500
-                        })
-
+                        });
+                        setClassAdded(true); // Update the state to indicate class is added
                     }
-                })
-
-
-
-
+                });
         }
         else {
             Swal.fire({
                 title: 'Please login to select Class',
-
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -52,31 +50,33 @@ const Popular = ({ PopularClass }) => {
                 if (result.isConfirmed) {
                     navigate('/login', { state: { from: location } })
                 }
-            })
+            });
         }
     }
-
 
     return (
         <div>
             <div className='card grid-container'>
-                <div className='h-48 w-72' >
+                <div className='h-48 w-72'>
                     <img src={image} alt="" />
                 </div>
                 <div>
                     <h4> <span className='text-lg font-bold '>Category:</span>{class_name}</h4>
                     <h4><span className='text-lg font-bold '>Instructor Name:</span>{instructor_name}</h4>
                     <h4><span className='text-lg font-bold '>Enrol Student:</span>{admitted_students}</h4>
-
                 </div>
                 <div className='flex gap-4'>
                     <h1><span className='text-lg font-bold '>price:</span> {course_fee}</h1>
-                    <Link ><button onClick={() => handelAddToCart(PopularClass)} className='btn btn-primary'>Select</button></Link>
+                    {/* Disable the button if class is already added */}
+                    <button
+                        onClick={() => handelAddToCart(PopularClass)}
+                        className='btn btn-primary'
+                        disabled={isClassAdded}
+                    >
+                        {isClassAdded ? 'Added' : 'Select'}
+                    </button>
                 </div>
-
-
             </div>
-
         </div>
     );
 };

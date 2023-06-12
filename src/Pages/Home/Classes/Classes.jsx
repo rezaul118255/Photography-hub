@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Class from './Class';
+import Title from '../../../Component/Title/Title';
 
 const Classes = () => {
     const [Classes, setClasses] = useState([]);
@@ -14,15 +15,21 @@ const Classes = () => {
             .then(data => setClasses(data))
     }, [])
     return (
-        <div>
+        <div >
             <Helmet>
                 <title>Photography/Class</title>
 
             </Helmet>
+            <div >
+                <Title subHeading={"All Classes are here"}
+                    heading={"All Class "}>
+
+                </Title>
+            </div>
             <div className='mt-5 gap-4 grid md:grid-cols-3'>
                 {
                     Classes.map(PopularClass => <Class
-                        key={PopularClass.id}
+                        key={PopularClass._id}
                         PopularClass={PopularClass}
                     ></Class>)
 
