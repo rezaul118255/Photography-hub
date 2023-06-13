@@ -6,13 +6,13 @@ import Swal from 'sweetalert2';
 
 const ManageUsers = () => {
     const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await fetch('http://localhost:5000/users');
+        const res = await fetch('https://assignment-12-server-pi-pearl.vercel.app/users');
         return res.json();
     })
 
     // Make admin sector 
     const handleMakeAdmin = user => {
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        fetch(`https://assignment-12-server-pi-pearl.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -32,7 +32,7 @@ const ManageUsers = () => {
     }
     // Make Instructor sector
     const handleMakeInstructor = user => {
-        fetch(`http://localhost:5000/users/Instructor/${user._id}`, {
+        fetch(`https://assignment-12-server-pi-pearl.vercel.app/users/Instructor/${user._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
     const navigate = useNavigate();
 
     const axiosSecure = axios.create({
-        baseURL: 'http://localhost:5000',
+        baseURL: 'https://assignment-12-server-pi-pearl.vercel.app',
     });
 
     useEffect(() => {

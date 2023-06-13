@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 const ManageClass = () => {
     const [Classes, setClasses] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/class')
+        fetch('https://assignment-12-server-pi-pearl.vercel.app/class')
             .then(res => res.json())
 
             .then(data => setClasses(data))

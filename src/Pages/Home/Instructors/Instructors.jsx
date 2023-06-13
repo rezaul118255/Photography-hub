@@ -6,7 +6,7 @@ import Title from '../../../Component/Title/Title.jsx';
 const Instructors = () => {
     const [instructor, setInstructor] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/Instructors')
+        fetch('https://assignment-12-server-pi-pearl.vercel.app/Instructors')
             .then(res => res.json())
             .then(data => setInstructor(data))
         // .then(data => {

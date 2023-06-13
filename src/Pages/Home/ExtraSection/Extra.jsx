@@ -11,19 +11,19 @@ const Extra = () => {
     const [instructor, setInstructor] = useState([]);
     // const { user } = useAuth();
     useEffect(() => {
-        fetch('http://localhost:5000/class')
+        fetch('https://assignment-12-server-pi-pearl.vercel.app/class')
             .then(res => res.json())
 
             .then(data => setClasses(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://assignment-12-server-pi-pearl.vercel.app/users')
             .then(res => res.json())
 
             .then(data => setusers(data))
     }, [])
     useEffect(() => {
-        fetch('http://localhost:5000/Instructors')
+        fetch('https://assignment-12-server-pi-pearl.vercel.app/Instructors')
             .then(res => res.json())
 
             .then(data => setInstructor(data))

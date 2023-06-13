@@ -5,7 +5,7 @@ import PopularInstructor from './PopularInstructor';
 const PopularSection = () => {
     // const [instructor, setInstructor] = useState([])
     // useEffect(() => {
-    //     fetch('http://localhost:5000/Instructors')
+    //     fetch('https://assignment-12-server-pi-pearl.vercel.app/Instructors')
     //         .then(res => res.json())
     //         .then(data => {
     //             const bestInstructor = data.filter(item => item.enrolStudent > -1);
@@ -17,7 +17,7 @@ const PopularSection = () => {
     const [instructor, setInstructor] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/Instructors')
+        fetch('https://assignment-12-server-pi-pearl.vercel.app/Instructors')
             .then(res => res.json())
             .then(data => {
                 const topInstructors = data

@@ -6,7 +6,7 @@ import Title from '../../../Component/Title/Title';
 const Classes = () => {
     const [Classes, setClasses] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/class')
+        fetch('https://assignment-12-server-pi-pearl.vercel.app/class')
             .then(res => res.json())
             // .then(data => {
             //     const popularClass = data.filter(item => item.admitted_students > 15);

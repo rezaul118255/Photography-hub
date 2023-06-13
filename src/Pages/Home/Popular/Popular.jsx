@@ -17,7 +17,7 @@ const Popular = ({ PopularClass }) => {
         console.log(PopularClass)
         if (user && user.email) {
             const orderItem = { menuItemId: id, class_name, instructor_name, available_seats, course_fee, image, email: user.email }
-            fetch('http://localhost:5000/Carts', {
+            fetch('https://assignment-12-server-pi-pearl.vercel.app/Carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

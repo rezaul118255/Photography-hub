@@ -5,7 +5,7 @@ import Popular from './Popular';
 const Popula = () => {
     // const [Classes, setClasses] = useState([]);
     // useEffect(() => {
-    //     fetch('http://localhost:5000/class')
+    //     fetch('https://assignment-12-server-pi-pearl.vercel.app/class')
     //         .then(res => res.json())
     //         .then(data => setClasses(data))
     //     // .then(data => {
@@ -20,7 +20,7 @@ const Popula = () => {
     const [Classes, setClasses] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/class')
+        fetch('https://assignment-12-server-pi-pearl.vercel.app/class')
             .then(res => res.json())
             .then(data => {
                 const popularClasses = data
