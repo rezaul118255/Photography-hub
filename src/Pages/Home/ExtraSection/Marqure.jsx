@@ -9,7 +9,7 @@ import Logo5 from '../../../../public/alif-ngoylung-jg-6ARMiaPM-unsplash.jpg';
 import Logo6 from '../../../../public/erik-mclean-9XK7vgoGSgc-unsplash.jpg';
 import Marquee from 'react-fast-marquee';
 import Title from '../../../Component/Title/Title';
-im
+
 
 const Marqure = () => {
     return (

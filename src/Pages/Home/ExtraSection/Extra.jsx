@@ -10,6 +10,7 @@ const Extra = () => {
     const [users, setusers] = useState([]);
     const [instructor, setInstructor] = useState([]);
     // const { user } = useAuth();
+    // const { user } = useAuth();
     useEffect(() => {
         fetch('https://assignment-12-server-pi-pearl.vercel.app/class')
             .then(res => res.json())
@@ -47,6 +48,7 @@ const Extra = () => {
                             <h3 className='text-2xl'>
                                 total User
                             </h3>
+                            {/* counter up */}
                             <CountUp start={0} end={users.length} duration={7} delay={0} className="countup" />
                         </div>
                     </div>
