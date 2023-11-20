@@ -1,83 +1,94 @@
-// import React from 'react';
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from 'react-responsive-carousel';
-
-
-
-// const Banner = () => {
-
-
-
-//     return (
-//         <div>
-//             <Carousel>
-//                 <div>
-//                     <img src="https://i.ibb.co/jWSxrHM/gradient-photography-template-design-23-2149738223.jpg" />
-//                 </div>
-//                 <div>
-//                     <img src="https://i.ibb.co/fXV35Tw/gradient-photography-template-design-23-2149738227.jpg" />
-
-//                 </div>
-//                 <div>
-//                     {/* <img src={img3} /> */}
-//                     <img src="https://i.ibb.co/G0R9mMn/horizontal-sale-banner-template-photographer-career-hobby-23-2150306830.jpg" />
-//                 </div>
-//                 <div>
-//                     {/* <img src={img4} /> */}
-//                     <img src="https://i.ibb.co/Z1N2dsW/landing-page-photography-workshop-template-23-2148668971.jpg" />
-//                 </div>
-//                 <div>
-//                     {/* <img src={img5} /> */}
-//                     <img src="https://i.ibb.co/jWSxrHM/gradient-photography-template-design-23-2149738223.jpg" />
-//                 </div>
-//                 <div>
-//                     {/* <img src={img6} /> */}
-//                     <img src="https://i.ibb.co/jWSxrHM/gradient-photography-template-design-23-2149738223.jpg" />
-//                 </div>
-//             </Carousel>
-
-
-
-//         </div>
-//     );
-// };
-
-// export default Banner;
-
-
 import React from 'react';
-// import { Flicking } from '@egjs/react-flicking';
-import '@egjs/react-flicking/dist/flicking.css';
-import Flicking from '@egjs/react-flicking';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";// requires a loader
+// import { Carousel } from 'react-responsive-carousel';
+import image6 from '../../../../public/alif-ngoylung-jg-6ARMiaPM-unsplash.jpg';
+import image5 from '../../../../public/lilly-rum-L6W9ZIQ5saM-unsplash.jpg';
+import image4 from '../../../../public/erik-mclean-9XK7vgoGSgc-unsplash.jpg';
+
 
 const Banner = () => {
+
+
+
     return (
-        <div className="carousel-wrapper" >
-            <Flicking className="carousel" circular={true} autoPlay={true} autoPlayInterval={3000}>
-                <div className="carousel-item">
-                    <img src="https://i.ibb.co/jWSxrHM/gradient-photography-template-design-23-2149738223.jpg" alt="Slide 1" />
+        <div >
+            <Carousel className=''>
+                <div className=''>
+                    <img src={image6} />
+
                 </div>
-                <div className="carousel-item">
-                    <img src="https://i.ibb.co/fXV35Tw/gradient-photography-template-design-23-2149738227.jpg" alt="Slide 2" />
+                <div>
+                    <img src={image5} />
                 </div>
-                <div className="carousel-item">
-                    <img src="https://i.ibb.co/G0R9mMn/horizontal-sale-banner-template-photographer-career-hobby-23-2150306830.jpg" alt="Slide 3" />
+                <div>
+                    <img src={image4} />
+
                 </div>
-                <div className="carousel-item">
-                    <img src="https://i.ibb.co/Z1N2dsW/landing-page-photography-workshop-template-23-2148668971.jpg" alt="Slide 4" />
+
+                <div>
+                    <img src={image6} />
+
                 </div>
-                <div className="carousel-item">
-                    <img src="https://i.ibb.co/jWSxrHM/gradient-photography-template-design-23-2149738223.jpg" alt="Slide 5" />
+                <div>
+                    <img src={image5} />
                 </div>
-                <div className="carousel-item">
-                    <img src="https://i.ibb.co/jWSxrHM/gradient-photography-template-design-23-2149738223.jpg" alt="Slide 6" />
+                <div>
+                    <img src={image4} />
+
                 </div>
-            </Flicking>
+
+
+
+            </Carousel>
+
+
+
         </div>
     );
 };
 
 export default Banner;
+
+
+
+
+
+
+// import React from 'react';
+// // import { Flicking } from '@egjs/react-flicking';
+// import '@egjs/react-flicking/dist/flicking.css';
+// import Flicking from '@egjs/react-flicking';
+
+// const Banner = () => {
+//     return (
+//         <div className="carousel-wrapper " >
+//             <Flicking className="carousel gap-8" circular={true} autoPlay={true} autoPlayInterval={3000}>
+//                 <div className="carousel-item  h-96 w-96">
+//                     <img src="https://i.ibb.co/D4X6JC7/photographer1.jpg" alt="Slide 1" />
+//                 </div>
+//                 <div className="carousel-item h-96 w-96">
+//                     <img src="https://i.ibb.co/HTc7nsP/photographer2.jpg" alt="Slide 2" />
+//                 </div>
+//                 <div className="carousel-item h-96 w-96">
+//                     <img src="https://i.ibb.co/kSbzycT/phototgrapher5.jpg" alt="Slide 3" />
+//                 </div>
+//                 <div className="carousel-item h-96 w-96">
+//                     <img src="https://i.ibb.co/D4X6JC7/photographer1.jpg" alt="Slide 1" />
+//                 </div>
+//                 <div className="carousel-item h-96 w-96">
+//                     <img src="https://i.ibb.co/HTc7nsP/photographer2.jpg" alt="Slide 2" />
+//                 </div>
+//                 <div className="carousel-item h-96 w-96">
+//                     <img src="https://i.ibb.co/kSbzycT/phototgrapher5.jpg" alt="Slide 3" />
+//                 </div>
+
+//             </Flicking>
+//         </div>
+//     );
+// };
+
+// export default Banner;
 
 
 

@@ -31,19 +31,19 @@ const Extra = () => {
 
     return (
         <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
-            <div className="style mt-16">
+            <div className="style mt-16 ">
                 {counter && (
-                    <div className="countup-container">
-                        <div className="countup-item" style={{ background: '#F2C94C' }}>
+                    <div className="countup-container ">
+                        <div className="countup-item w-32 md:w-64" style={{ background: '#F2C94C' }}>
 
                             <h3 className='text-2xl'>Total Class:</h3>
                             <CountUp start={0} end={Classes.length} duration={4} delay={0} className="countup" />
                         </div>
-                        <div className="countup-item" style={{ background: '#56CCF2' }}>
-                            <h3 className='text-2xl'>Total Instructor</h3>
+                        <div className="countup-item w-32 md:w-64 " style={{ background: '#56CCF2' }}>
+                            <h3 className='text-lg md:text-2xl'>Total Instructor</h3>
                             <CountUp start={0} end={instructor.length} duration={4} delay={0} className="countup" />
                         </div>
-                        <div className="countup-item" style={{ background: '#6FCF97' }}>
+                        <div className="countup-item w-32 md:w-64" style={{ background: '#6FCF97' }}>
                             <h3 className='text-2xl'>
                                 total User
                             </h3>
